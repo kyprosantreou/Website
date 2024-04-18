@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="../Styles/login_style.css">
+</head>
+<body>
+    <div class="card">
+        <form action="" method="post">
+            <h1>Login to your account</h1>
+            <label for="Email">Email:</label><br>
+            <input type="text" id="Email" name="Email"><br>
+            <label for="password">Password:</label><br>
+            <div class="password-input">
+                <input type="password" id="password" name="password">
+                <button class="toggle-password" type="button" onclick="togglePasswordVisibility()"></button>
+            </div>
+            <input type="submit" value="Login">
+        </form>
+    </div>
+
+    <script src="../Javascript/password_toggle.js"></script>
+</body>
+</html>

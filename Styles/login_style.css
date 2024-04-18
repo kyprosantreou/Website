@@ -1,0 +1,66 @@
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 30px;
+}
+
+.password-input {
+    position: relative;
+}
+
+.password-input input {
+    padding-right: 30px;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 5px;
+    top: 35%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background-image: url('../Assets/eye.svg'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    border: none;
+    padding: 0;
+    outline: none; 
+}
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #000000;
+}
+
+input[type="submit"] {
+    background-color: #027cfe;
+    color: #ffffff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
