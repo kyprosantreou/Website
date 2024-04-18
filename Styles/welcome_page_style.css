@@ -1,0 +1,31 @@
+body {
+    padding: 25px;
+    background-color: white;
+    color: black;
+    font-size: 25px;
+  }
+  
+.dark-mode {
+    background-color: rgb(0, 0, 0);
+    color: white;
+  }
+
+#toggle-theme-btn {
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px; 
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    width: 150px;
+    height: 40px; 
+}
+
+#toggle-theme-btn img {
+    width: 40px;
+    height: 40px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
