@@ -1,12 +1,25 @@
 function togglePasswordVisibility() {
-    var passwordField = document.getElementById('password');
-    var toggleButton = document.querySelector('.toggle-password');
-
-    if (passwordField.type === "password") {
-        passwordField.type = "text";
-        toggleButton.style.backgroundImage = "url('../Assets/eye-off.svg')"; // Replace 'eye-off.svg' with your eye-off icon image
+    var passwordInput = document.getElementById("password");
+    var passwordToggle = document.querySelector(".toggle-password");
+    
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        passwordToggle.style.backgroundImage = "url('../Assets/eye-off.svg')";
     } else {
-        passwordField.type = "password";
-        toggleButton.style.backgroundImage = "url('../Assets/eye.svg')"; // Replace 'eye.svg' with your eye icon image
+        passwordInput.type = "password";
+        passwordToggle.style.backgroundImage = "url('../Assets/eye.svg')";
+    }
+}
+
+function toggleRepeatPasswordVisibility() {
+    var repeatPasswordInput = document.getElementById("repeat_password");
+    var repeatPasswordToggle = document.querySelector(".toggle-repeat-password");
+    
+    if (repeatPasswordInput.type === "password") {
+        repeatPasswordInput.type = "text";
+        repeatPasswordToggle.style.backgroundImage = "url('../Assets/eye-off.svg')";
+    } else {
+        repeatPasswordInput.type = "password";
+        repeatPasswordToggle.style.backgroundImage = "url('../Assets/eye.svg')";
     }
 }

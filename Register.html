@@ -3,19 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="../Styles/register_style.css">
 </head>
 <body>
-    <h1>Register!</h1>
-    <form action="" method="post"></form>
-    <label for = "Email"> Email:</label><br>
-    <input type="text" id = "Email" name = "Email"><br>
-    <label for = "password"> Password:</label><br>
-    <input type = "password" id = "password" name = "password"><br>
-    <label for = "repeat_password"> Repeat Password:</label><br>
-    <input type = "repeat_password" id = "repeat_password" name = "Repeat your password"><br><br>
-    <input type="submit" value="Register">
-</form>
+    <div class="card">
+        <form action="" method="post">
+            <h1>Register</h1>
+            <label for="Email">Email:</label><br>
+            <input type="text" id="Email" name="Email" placeholder="example@gmail.com"><br>
+            <label for="password">Password:</label><br>
+            <div class="password-input">
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <button class="toggle-password" type="button" onclick="togglePasswordVisibility()"></button>
+            </div>
+            <div class="repeat_password-input">
+                <label for="repeat_password">Repeat Password:</label><br>
+                <div class="password-input">
+                    <input type="password" id="repeat_password" name="repeat_password" placeholder="Repeat your password">
+                    <button class="toggle-repeat-password" type="button" onclick="toggleRepeatPasswordVisibility()"></button>
+                </div>
+            </div>
+                
+            <input type="submit" value="Register">
+        </form>
+    </div>
+
+    <script src="../Javascript/password_toggle.js"></script>
 
 </body>
 </html>
