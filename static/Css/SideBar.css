@@ -1,12 +1,14 @@
 .sidebar {
-    height: 100%;
-    background-color: #1b2d48;
-    width: 200px;
-    position: fixed;
-    padding: 0;
-    padding-left: 10px;
-    top: 0;
-    left: 0;
+  height: 100%; 
+  width: 0;
+  position: fixed; 
+  z-index: 1;
+  top: 0px;
+  left: 0px;
+  background-color: #1b2d48;
+  overflow-x: hidden;
+  padding-top: 60px; 
+  transition: 0.5s;
 }
 
 .sidebar a {
@@ -18,9 +20,47 @@
     font-family: 'Roboto', sans-serif;
 }
 
+.sidebar a:hover {
+  color: #0B80A1;
+}
+
+.sidebar .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* The button used to open the sidebar */
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #111;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+}
+
+.openbtn:hover {
+  background-color: #444;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s; /* If you want a transition effect */
+  padding: 20px;
+}
+
 .sidebar a img {
     width: 30px; 
     height: 30px; 
     margin-right: 10px;
     background-color: #1b2d48;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
 }
