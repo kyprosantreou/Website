@@ -3,13 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TaskFlow</title>
-    <link rel="stylesheet" href="../Styles/welcome_page_style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="../static/CSS/SideBar.css">
+    <link rel="stylesheet" href="../static/CSS/welcome_page_style.css">
 </head>
 <body>
-    <button id="toggle-theme-btn" onclick="toggleDarkMode()">
-        <img id="modeIcon" src="../Assets/sun.svg" alt="Light Mode">
-    </button>
+    <div class="sidebar">
+        <a href="#"><img id="home" src="../static/Assets/home.png" alt="Home"> Home</a>
+        <a href="#"><img id="info" src="../static/Assets/info.png" alt="Info"> About</a>
+        <a href="#"><img id="contact" src="../static/Assets/contact.png" alt="Contact"> Contact</a>
+
+        <button id="toggle-theme-btn" onclick="toggleDarkMode()" title="Toggle theme mode">
+            <img id="modeIcon" src="../static/Assets/sun.svg" alt="Light Mode">
+            <span id="button-text">Dark Mode</span>
+        </button>
+    </div>
 
     <h1>Description Page:</h1>
     <p>Welcome to TaskFlow: Streamline Your Projects with Ease!<br>
@@ -60,23 +68,27 @@
 
         Celebrate Success: As tasks are completed and projects reach their milestones, celebrate your team's success and reflect on lessons learned to continuously improve your processes.
     </p>
-    
-    <script>
-        function toggleDarkMode() {
-            var element = document.body;
-            element.classList.toggle("dark-mode");
 
-            var button = document.getElementById("toggle-theme-btn");
-            var image = document.getElementById("modeIcon");
-
-            if (element.classList.contains("dark-mode")) {
-                image.src = "../Assets/moon.svg";
-                image.alt = "Dark Mode";
-            } else {
-                image.src = "../Assets/sun.svg";
-                image.alt = "Light Mode";
-            }
-        }
-    </script>
 </body>
+
+<script>
+    function toggleDarkMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+
+        var button = document.getElementById("toggle-theme-btn");
+        var image = document.getElementById("modeIcon");
+
+        if (element.classList.contains("dark-mode")) {
+            image.src = "../static/Assets/moon.svg";
+            image.alt = "Dark Mode";
+            document.getElementById("button-text").innerText = "Light Mode";
+        } else {
+            image.src = "../static/Assets/sun.svg";
+            image.alt = "Dark Mode";
+            document.getElementById("button-text").innerText = "Dark Mode";
+        }
+    }
+</script>
+
 </html>
