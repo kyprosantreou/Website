@@ -1,7 +1,14 @@
-from flask import Flask, render_template
-from database_connection import mysql
+from flask import Flask, redirect, render_template, request, url_for
+from flask_mysqldb import MySQL
 
 app = Flask(__name__)
+
+app.config['MYSQL_HOST'] = 'raspberrypy.ddns.net'
+app.config['MYSQL_USER'] = 'taskflow'
+app.config['MYSQL_PASSWORD'] = 'Ionio2002@!'
+app.config['MYSQL_DB'] = 'task_flow'
+
+mysql = MySQL(app)
 
 @app.route('/')
 def index():
@@ -9,11 +16,28 @@ def index():
 
 @app.route('/login')
 def login():
-    return render_template('login.html')
+   
+   return render_template('login.html')
 
-@app.route('/register')
+@app.route('/register', methods=['GET','POST'])
 def register():
-    return render_template('register.html')
+   if request.method == 'POST':
+      name = request.form['Name']
+      surname = request.form['Surname']
+      username = request.form['Username']
+      email = request.form['Email']
+      password = request.form['password']
+      cur = mysql.connection.cursor()
+
+      cur.execute(f"INSERT INTO users (name, surname, username, email, password) VALUES ('{name}', '{surname}', '{username}', '{email}', '{password}')")
+      
+      mysql.connection.commit()
+
+      cur.close()
+
+      return redirect(url_for('login'))
+   
+   return render_template('register.html')
 
 if __name__ == '__main__':
     app.debug = True

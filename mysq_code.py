@@ -16,9 +16,7 @@ try:
             surname VARCHAR(255) NOT NULL,
             username VARCHAR(255) NOT NULL,     
             email VARCHAR(255) PRIMARY KEY,
-            email_password VARCHAR(255) NOT NULL,
-            password VARCHAR(255) NOT NULL,
-            simplepush_key VARCHAR(255) NOT NULL
+            password VARCHAR(255) NOT NULL
         );
         ''')
 
