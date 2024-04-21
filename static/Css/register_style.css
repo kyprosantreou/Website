@@ -1,6 +1,6 @@
 body {
     background: rgb(2,0,36);
-    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgb(2,0,36,1) 150%);
+    background: linear-gradient(90deg, rgb(33, 25, 81) 0%, rgb(131, 111, 255) 50%, rgb(33, 25, 81) 105%);
 }
 
 html, body {
@@ -20,7 +20,7 @@ html, body {
 }
 
 .card {
-    background-color: #ffffff;
+    background-color: rgb(240, 243, 255);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width:400px;
@@ -54,7 +54,7 @@ h1 {
     cursor: pointer;
     width: 25px;
     height: 25px;
-    background-image: url('../Assets/eye.svg'); 
+    background-image: url('../Assets/eye-off.svg'); 
     background-size: contain;
     background-repeat: no-repeat;
     background-color: #ffffff;
@@ -82,7 +82,7 @@ label {
 }
 
 input[type="submit"] {
-    background-color: #1000ff;
+    background-color: rgb(55, 181, 182);
     color: #ffffff;
     padding: 10px 20px;
     border: none;
@@ -95,5 +95,5 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-    background-color: #0200b9;
+    background-color: rgb(21, 245, 186);
 }

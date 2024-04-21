@@ -1,13 +1,13 @@
 body {
   padding: 25px;
-  background-color: white;
+  background-color: rgb(240, 243, 255);
   color: black;
   font-size: 25px;
 }
 
 header {
   padding: 25px;
-  background-color:  #23395d;
+  background-color: rgb(111, 97, 192);
   font-size: 25px;
   height: 40px;
   width: 100%;
@@ -23,7 +23,7 @@ header {
 }
 
 #toggle-theme-btn {
-  background-color: #1b2d48;
+  background-color: rgb(111, 97, 192);
   border: none;
   cursor: pointer;
   padding: 10px; 
@@ -50,5 +50,9 @@ header {
 }
 
 #button-text:hover {
-  color: #0B80A1;
+  color: rgb(150, 233, 198);
+}
+
+#LoginButton{
+  background-color:red;
 }

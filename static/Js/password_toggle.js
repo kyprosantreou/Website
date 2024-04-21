@@ -4,10 +4,10 @@ function togglePasswordVisibility() {
     
     if (passwordInput.type === "password") {
         passwordInput.type = "text";
-        passwordToggle.style.backgroundImage = "url('../Assets/eye-off.svg')";
+        passwordToggle.style.backgroundImage = "url('../static/Assets/eye.svg')";
     } else {
         passwordInput.type = "password";
-        passwordToggle.style.backgroundImage = "url('../Assets/eye.svg')";
+        passwordToggle.style.backgroundImage = "url('../static/Assets/eye-off.svg')";
     }
 }
 
@@ -17,9 +17,9 @@ function toggleRepeatPasswordVisibility() {
     
     if (repeatPasswordInput.type === "password") {
         repeatPasswordInput.type = "text";
-        repeatPasswordToggle.style.backgroundImage = "url('../Assets/eye-off.svg')";
+        repeatPasswordToggle.style.backgroundImage = "url('../static/Assets/eye.svg')";
     } else {
         repeatPasswordInput.type = "password";
-        repeatPasswordToggle.style.backgroundImage = "url('../Assets/eye.svg')";
+        repeatPasswordToggle.style.backgroundImage = "url('../static/Assets/eye-off.svg')";
     }
 }

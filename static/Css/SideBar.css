@@ -5,12 +5,12 @@
   z-index: 1;
   top: 0px;
   left: 0px;
-  background-color: #1b2d48;
+  background-color: rgb(111, 97, 192);
   overflow-x: hidden;
   padding-top: 60px; 
   transition: 0.5s;
   border-top-left-radius: 0px;
-  border-top-right-radius: 20px;
+  border-top-right-radius: 10px;
 }
 
 .sidebar a {
@@ -23,7 +23,7 @@
 }
 
 .sidebar a:hover {
-  color: #0B80A1;
+  color: rgb(150, 233, 198);
 }
 
 .sidebar .closebtn {
@@ -58,7 +58,7 @@
     width: 30px; 
     height: 30px; 
     margin-right: 10px;
-    background-color: #1b2d48;
+    background-color: rgb(111, 97, 192);
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
