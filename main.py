@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from database_connection import mysql
 
 app = Flask(__name__)
 
