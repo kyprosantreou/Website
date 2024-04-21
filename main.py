@@ -14,10 +14,25 @@ mysql = MySQL(app)
 def index():
    return render_template('index.html')
 
-@app.route('/login')
+@app.route('/login', methods=['GET', 'POST'])
 def login():
-   
-   return render_template('login.html')
+    if request.method == 'POST':
+        email = request.form['Email']
+        password = request.form['password']
+        cur = mysql.connection.cursor()
+
+        cur.execute("SELECT * FROM users WHERE email = %s AND password = %s", (email, password))
+        user = cur.fetchone()
+
+        cur.close()
+
+        if user:
+            return redirect(url_for('index'))
+        else:
+            return render_template('login.html', error='Invalid email or password.')
+
+    return render_template('login.html')
+
 
 @app.route('/register', methods=['GET','POST'])
 def register():
