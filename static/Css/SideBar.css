@@ -38,10 +38,11 @@
 .openbtn {
   font-size: 20px;
   cursor: pointer;
-  background-color: rgb(33, 25, 81);
+  background-color:rgb(47, 41, 82);
   color: white;
   padding: 5px 15px;
   border: none;
+  border-radius: 20px;
 }
 
 .openbtn:hover {

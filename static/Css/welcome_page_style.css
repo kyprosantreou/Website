@@ -68,6 +68,7 @@ header {
   border: none;
   margin-left: auto; 
   margin-right: 5px;
+  border-radius: 20px;
 }
 
 #LoginButton:hover{
@@ -82,6 +83,7 @@ header {
   padding: 10px 15px;
   border: none;
   margin-right: 10px;
+  border-radius: 20px;
 }
 
 #RegisterButton:hover{
