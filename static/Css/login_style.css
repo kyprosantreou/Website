@@ -98,3 +98,32 @@ input[type="submit"] {
 input[type="submit"]:hover {
     background-color: rgb(21, 245, 186);
 }
+
+label[for="rememberMe"] {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 200;
+    text-decoration: underline;
+}
+
+.rememberMe-forgotPassword {
+    display: flex;
+    justify-content: space-between;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 200;
+    text-decoration: underline; 
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#forgot-password {
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #000000;
+    font-weight: 200;
+    text-decoration: underline; 
+    cursor: pointer;
+}
