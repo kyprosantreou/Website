@@ -1,34 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.accordion {
-  background-color: #eee;
-  color: #444;
-  cursor: pointer;
-  padding: 18px;
-  width: 100%;
-  border: none;
-  text-align: left;
-  outline: none;
-  font-size: 15px;
-  transition: 0.4s;
-}
-
-.active, .accordion:hover {
-  background-color: #ccc; 
-}
-
-.panel {
-  padding: 0 18px;
-  display: none;
-  background-color: white;
-  overflow: hidden;
-}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../static/Css/SideBar.css">
+  <link rel="stylesheet" href="../static/CSS/welcome_page_style.css">
+  <link rel="stylesheet" href="../style.css">
 </head>
+
+<header>
+  <button class="openbtn" onclick="openNav()">&#9776; </button>
+  <div class="login-register-container">
+      <button id="LoginButton" onclick="redirectToLoginPage()">Login</button>
+      <button id="RegisterButton" onclick="redirectToRegisterPage()">Register</button>
+  </div>
+</header>
+
 <body>
+
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a href="#"><img id="home" src="../static/Assets/home.png" alt="Home"> Home</a>
+    <a href="#"><img id="info" src="../static/Assets/info.png" alt="Info"> About</a>
+    <a href="#"><img id="contact" src="../static/Assets/contact.png" alt="Contact"> Contact</a>
+
+    <button id="toggle-theme-btn" onclick="toggleDarkMode()" title="Toggle theme mode">
+        <img id="modeIcon" src="../static/Assets/sun.svg" alt="Light Mode">
+        <span id="button-text">Dark Mode</span>
+    </button>
+  </div>
 
 <h2>Accordion</h2>
 
@@ -48,20 +49,42 @@
 </div>
 
 <script>
-var acc = document.getElementsByClassName("accordion");
-var i;
+  var acc = document.getElementsByClassName("accordion");
+  var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var panel = this.nextElementSibling;
-    if (panel.style.display === "block") {
-      panel.style.display = "none";
-    } else {
-      panel.style.display = "block";
+  for (i = 0; i < acc.length; i++) {
+    acc[i].addEventListener("click", function() {
+      this.classList.toggle("active");
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      } else {
+        panel.style.display = "block";
+      }
+    });
+  }
+</script>
+
+<script src="../static/Js/bar.js"></script>
+<script src="../static/Js/login-register_redirect.js"></script>
+<script>
+    function toggleDarkMode() {
+        var element = document.body;
+        element.classList.toggle("dark-mode");
+
+        var button = document.getElementById("toggle-theme-btn");
+        var image = document.getElementById("modeIcon");
+
+        if (element.classList.contains("dark-mode")) {
+            image.src = "../static/Assets/moon.svg";
+            image.alt = "Dark Mode";
+            document.getElementById("button-text").innerText = "Light Mode";
+        } else {
+            image.src = "../static/Assets/sun.svg";
+            image.alt = "Dark Mode";
+            document.getElementById("button-text").innerText = "Dark Mode";
+        }
     }
-  });
-}
 </script>
 
 </body>

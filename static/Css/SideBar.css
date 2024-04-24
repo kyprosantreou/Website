@@ -60,7 +60,10 @@
     background-color: rgb(64, 54, 121);
 }
 
-@media screen and (max-height: 450px) {
+#profile{
+  margin-top: 10px;
+}
+/* @media screen and (max-height: 450px) {
   .sidebar {padding-top: 15px;}
   .sidebar a {font-size: 18px;}
-}
+} */

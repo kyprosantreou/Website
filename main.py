@@ -53,6 +53,10 @@ def register():
    
    return render_template('register.html')
 
+@app.route('/static/Templates/Profile.html')
+def profile():
+    return render_template('Profile.html')
+
 if __name__ == '__main__':
     app.debug = True
     app.run() 
