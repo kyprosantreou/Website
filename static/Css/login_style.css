@@ -127,3 +127,8 @@ label[for="rememberMe"] {
     text-decoration: underline; 
     cursor: pointer;
 }
+
+#validationMessage{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}

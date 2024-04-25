@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="card">
-        <form action="" method="post">
+        <form action="" method="post" onsubmit="return validateEmail()">
             <h1>Login to your account.</h1>
             <label for="Email">Email: </label><br>
             <input type="text" id="Email" name="Email" placeholder="example@gmail.com" required><br>
@@ -25,10 +25,12 @@
                 <a id="forgot-password" href="#">Forgot Password?</a>
             </div>
 
+            <p id="validationMessage"></p>
             <input type="submit" value="Login">
         </form>
     </div>
 
     <script src="{{ url_for('static', filename='Js/password_toggle.js') }}"></script>
+    <script src="{{ url_for('static', filename='Js/emailValidation.js') }}"></script>
 </body>
 </html>
