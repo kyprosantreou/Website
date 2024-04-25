@@ -2,7 +2,7 @@ body {
   display: block;
   justify-content: center;
   padding: 40px; 
-  background: linear-gradient(90deg,  rgb(188, 206, 248), rgb(250, 247, 240), rgb(250, 247, 240),rgb(188, 206, 248));
+  background: white;
   font-family: 'Roboto', sans-serif;
   color: #333;
 }
