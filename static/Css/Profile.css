@@ -1,0 +1,85 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    padding: 20px;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column; /* Adjusted */
+}
+
+.profile-picture {
+    margin-right: 20px; /* Adjusted */
+}
+
+.profile-picture img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.account-settings {
+    flex: 1;
+}
+
+.account-settings h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.delete-account,
+.submit {
+    background-color: #4ff7a3;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px; /* Adjusted */
+}
+
+.delete-account {
+    background-color: #ff4d4d;
+}
+
+.delete-account:hover {
+    background-color: #e60000;
+}
+
+.submit:hover {
+    background-color: #00ff15;
+}
+
+#upload-profile-pic {
+    font-size: large;
+    margin-bottom: 20px;
+}
