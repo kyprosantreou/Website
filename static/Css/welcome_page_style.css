@@ -1,8 +1,10 @@
 body {
-  padding: 25px;
-  background-color: rgb(240, 243, 255);
-  color: black;
-  font-size: 25px;
+  display: block;
+  justify-content: center;
+  padding: 40px; 
+  background: linear-gradient(90deg,  rgb(188, 206, 248), rgb(250, 247, 240), rgb(250, 247, 240),rgb(188, 206, 248));
+  font-family: 'Roboto', sans-serif;
+  color: #333;
 }
 
 header {
@@ -29,7 +31,7 @@ header {
 }
 
 #toggle-theme-btn {
-  background-color: rgb(111, 97, 192);
+  background-color: rgb(64, 54, 121);
   border: none;
   cursor: pointer;
   padding: 10px; 
@@ -89,3 +91,9 @@ header {
 #RegisterButton:hover{
   background-color:  #4c4670;
 }
+/* 
+@media (min-width: 600px) {
+  body {
+    padding: 60px 10px;
+  }
+}   */
