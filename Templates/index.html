@@ -6,12 +6,13 @@
     <title>Document</title>
     <link rel="stylesheet" href="../static/Css/SideBar.css">
     <link rel="stylesheet" href="../static/CSS/welcome_page_style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <header>
     <button class="openbtn" onclick="openNav()">&#9776; </button>
     <div class="login-register-container">
-        <button id="LoginButton" onclick="redirectToLoginPage()">Login</button>
-        <button id="RegisterButton" onclick="redirectToRegisterPage()">Register</button>
+        <button id="LoginButton">Login</button>
+        <button id="RegisterButton">Register</button>
     </div>
 </header>
 <body>
@@ -81,8 +82,31 @@
   
 </body>
     <script src="../static/Js/bar.js"></script>
-    <script src="../static/Js/login-register_redirect.js"></script>
     <script>
+        $(document).ready(function() {
+            // Redirect to login page
+            $('#LoginButton').click(function() {
+                window.location.href = '/login';
+            });
+
+            // Redirect to register page
+            $('#RegisterButton').click(function() {
+                window.location.href = '/register';
+            });
+
+            // Load and apply the saved theme mode
+            var themeMode = getCookie('theme_mode');
+            if (themeMode === 'dark') {
+                toggleDarkMode();
+            }
+        });
+
+        function getCookie(name) {
+            var value = "; " + document.cookie;
+            var parts = value.split("; " + name + "=");
+            if (parts.length === 2) return parts.pop().split(";").shift();
+        }
+
         function toggleDarkMode() {
             var element = document.body;
             element.classList.toggle("dark-mode");
@@ -94,10 +118,12 @@
                 image.src = "../static/Assets/moon.svg";
                 image.alt = "Dark Mode";
                 document.getElementById("button-text").innerText = "Light Mode";
+                document.cookie = "theme_mode=dark";
             } else {
                 image.src = "../static/Assets/sun.svg";
                 image.alt = "Dark Mode";
                 document.getElementById("button-text").innerText = "Dark Mode";
+                document.cookie = "theme_mode=light";
             }
         }
     </script>
