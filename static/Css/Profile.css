@@ -1,24 +1,29 @@
 body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
+    height: 100vh; /* Ensure full viewport height */
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    display: flex;
-    padding: 20px;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    margin: 0; /* Remove default body margin */
 }
 
 .profile {
     display: flex;
-    flex-direction: column; /* Adjusted */
+    flex-direction: column;
+    align-items: center; /* Center items horizontally */
 }
 
 .profile-picture {
-    margin-right: 20px; /* Adjusted */
+    margin-bottom: 20px; /* Add space between profile picture and button */
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Center account settings horizontally */
+}
+
+.account-settings {
+    padding: 20px;
+    max-width: 400px; /* Limit the width of account settings */
 }
 
 .profile-picture img {
@@ -28,23 +33,16 @@ body {
     object-fit: cover;
 }
 
-.account-settings {
-    flex: 1;
-}
-
-.account-settings h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.form-group {
-    margin-bottom: 15px;
+.upload-button {
+    cursor: pointer;
+    color: #4ff7a3;
+    margin-top: 10px;
 }
 
 .form-group label {
-    display: block;
     font-weight: bold;
     margin-bottom: 5px;
+    display: block;
 }
 
 .form-group input {
@@ -53,6 +51,7 @@ body {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 .delete-account,
@@ -64,7 +63,7 @@ body {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 10px; /* Adjusted */
+    margin-right: 10px;
 }
 
 .delete-account {

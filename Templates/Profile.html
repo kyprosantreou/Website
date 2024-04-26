@@ -8,18 +8,16 @@
 </head>
 <body>
 
-    <div class="profile">
-        <div class="profile-picture">
-            <img id="profile-image" src="{{ url_for('static', filename='Assets/person.png') }}" alt="Profile Picture">
-            <input type="file" id="upload-profile-pic" accept="image/*" style="display: none;">
-            <label for="upload-profile-pic" class="upload-button">Upload Picture</label>
-        </div>
+  <div class="profile">
+    <div class="profile-picture">
+        <img id="profile-image" src="{{ url_for('static', filename='Assets/person.png') }}" alt="Profile Picture">
+        <input type="file" id="upload-profile-pic" accept="image/*" style="display: none;">
+        <label for="upload-profile-pic" class="upload-button">Upload Picture</label>
     </div>
-    
-    <div class="container">
-        <div class="account-settings">
-            <h2>Account Settings</h2>
-            <form>
+
+    <div class="account-settings">
+        <h2>Account Settings</h2>
+        <form>
             <div class="form-group">
                 <label for="change-email">New Email</label>
                 <input type="email" id="change-email" name="change-email">
@@ -42,21 +40,21 @@
             </div>
             <button type="submit" class="delete-account">Delete Account</button>
             <button type="submit" class="submit">Submit</button>
-            </form>
-        </div>
+        </form>
     </div>
+</div>
 
-  <script>
+<script>
     document.getElementById('upload-profile-pic').addEventListener('change', function(event) {
-      const file = event.target.files[0];
-      const reader = new FileReader();
+        const file = event.target.files[0];
+        const reader = new FileReader();
 
-      reader.onload = function(e) {
-        document.getElementById('profile-image').src = e.target.result;
-      };
+        reader.onload = function(e) {
+            document.getElementById('profile-image').src = e.target.result;
+        };
 
-      reader.readAsDataURL(file);
+        reader.readAsDataURL(file);
     });
-  </script>
+</script>
 </body>
 </html>
