@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="../static/Css/SideBar.css">
-  <link rel="stylesheet" href="../static/CSS/welcome_page_style.css">
-  <link rel="stylesheet" href="../static/CSS/accordion.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/SideBar.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/welcome_page_style.css') }}">
+  <link rel="stylesheet" href="{{ url_for('static', filename='CSS/accordion.css') }}">
 </head>
 
 <header>
@@ -21,14 +21,13 @@
 
   <div id="mySidebar" class="sidebar">
     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <a href="../static/Templates/Profile.html" onclick="redirectToProfilePage()">
+    <a href="../Templates/Profile.html" onclick="redirectToProfilePage()">
       <img id="profile" src="" alt=""> Profile
     </a>    
     <a href="#"><img id="home" src="../static/Assets/home.png" alt="Home"> Home</a>
-    <a href="#"><img id="info" src="../static/Assets/info.png" alt="Info"> About</a>
-    <a href="#"><img id="contact" src="../static/Assets/contact.png" alt="Contact"> Contact</a>
+    <a href="../Templates/index.html" onclick="redirectToAboutPage()" ><img id="info" src="../static/Assets/info.png" alt="Info"> About</a>
     <button id="toggle-theme-btn" onclick="toggleDarkMode()" title="Toggle theme mode">
-        <img id="modeIcon" src="../static/Assets/sun.svg" alt="Light Mode">
+        <img id="modeIcon" src="{{ url_for('static', filename='Assets/sun.svg') }}" alt="Light Mode">
         <span id="button-text">Dark Mode</span>
     </button>
   </div>
@@ -82,60 +81,10 @@
     </p>
 </div>
 
-<script>
-  var acc = document.getElementsByClassName("accordion1");
-  var i;
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active1");
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  }
-</script>
-
-<script>
-  var acc = document.getElementsByClassName("accordion2");
-  var i;
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active2");
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  }
-</script>
-
-<script>
-  var acc = document.getElementsByClassName("accordion3");
-  var i;
-
-  for (i = 0; i < acc.length; i++) {
-    acc[i].addEventListener("click", function() {
-      this.classList.toggle("active3");
-      var panel = this.nextElementSibling;
-      if (panel.style.display === "block") {
-        panel.style.display = "none";
-      } else {
-        panel.style.display = "block";
-      }
-    });
-  }
-</script>
-
-<script src="../static/Js/bar.js"></script>
-<script src="../static/Js/login-register_redirect.js"></script>
-<script>
+<script src="{{ url_for('static', filename='Js/accordions.js') }}"></script>
+<script src="{{ url_for('static', filename='Js/bar.js') }}"></script>
+<script src="{{ url_for('static', filename='Js/login-register_redirect.js') }}"></script>
+<!-- <script>
     function toggleDarkMode() {
         var element = document.body;
         element.classList.toggle("dark-mode");
@@ -153,13 +102,17 @@
             document.getElementById("button-text").innerText = "Dark Mode";
         }
     }
-</script>
-
+</script> -->
+<script src="{{ url_for('static', filename='Js/darkmode.js') }}"></script>
 <script>
   function redirectToProfilePage() {
-    window.location.href = "../static/Templates/Profile.html";;
+    window.location.href = "../Templates/Profile.html";
 }
 </script>
-
+<script>
+  function redirectToAboutPage() {
+    window.location.href = "../Templates/index.html";
+}
+</script>
 </body>
 </html>

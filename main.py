@@ -64,10 +64,13 @@ def register():
    
     return render_template('register.html')
 
-
-@app.route('/static/Templates/Profile.html')
+@app.route('/Templates/Profile.html')
 def profile():
     return render_template('Profile.html')
+
+@app.route('/Templates/index.html')
+def about():
+    return render_template('index.html')
 
 if __name__ == '__main__':
     app.debug = True

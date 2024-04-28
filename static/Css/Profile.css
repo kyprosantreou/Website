@@ -1,29 +1,91 @@
 body {
-    height: 100vh; /* Ensure full viewport height */
+    height: 100vh; 
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    margin: 0; /* Remove default body margin */
+    justify-content: center; 
+    align-items: center; 
+    margin: 0; 
+    background-color: #efeaff;
+    /* background: linear-gradient(90deg, rgb(33, 25, 81) 0%, rgb(131, 111, 255) 50%, rgb(33, 25, 81) 105%); */
+    caret-color: black; 
+    margin-bottom: auto;
+}
+
+header {
+    padding: 25px;
+    background-color: rgb(47, 41, 82);
+    font-size: 25px;
+    height: 40px;
+    width: 100%;
+    padding-left: 0; 
+    position: fixed;
+    top: 0;
+    left: 0%;
+    display:flex;
+    justify-content: space-between; 
+  }
+
+.dark-mode {
+    background-color:#212124;
+    color: white;
+}
+
+#toggle-theme-btn {
+    background-color: rgb(64, 54, 121);
+    border: none;
+    cursor: pointer;
+    padding: 10px; 
+    font-size: 18px;
+    border-radius: 5px;
+    width: auto; 
+    margin-bottom: 10px; 
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+}
+  
+#toggle-theme-btn img {
+width: 40px;
+height: 40px;
+margin-right: 10px; 
+}
+
+#button-text:hover {
+    color: rgb(150, 233, 198);
+}
+
+h2{
+    text-decoration: underline;
+}
+
+#button-text {
+margin-left: 5px;
+color: white;
+font-size: 22px;
+font-family:'Roboto', sans-serif;
 }
 
 .profile {
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center items horizontally */
+    align-items: center; 
 }
 
 .profile-picture {
-    margin-bottom: 20px; /* Add space between profile picture and button */
+    margin-bottom:auto; 
+    margin-top: 40px;
 }
 
 .container {
     display: flex;
-    justify-content: center; /* Center account settings horizontally */
+    justify-content: center; 
 }
 
 .account-settings {
     padding: 20px;
-    max-width: 400px; /* Limit the width of account settings */
+    max-width: 400px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; 
+    font-weight: 600;
 }
 
 .profile-picture img {
@@ -35,21 +97,28 @@ body {
 
 .upload-button {
     cursor: pointer;
-    color: #4ff7a3;
+    color: #000000;
     margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px; 
+    font-weight: 600;
+    border-radius: 10px;
 }
 
 .form-group label {
-    font-weight: bold;
     margin-bottom: 5px;
     display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; 
+    font-weight: 600;
+    text-decoration: underline;
 }
 
 .form-group input {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 4px ;
     border-radius: 5px;
     margin-bottom: 15px;
 }
