@@ -14,7 +14,6 @@ ph = argon2.PasswordHasher()
 
 @app.route('/')
 def index():
-    # Check if 'theme_mode' cookie exists
     theme_mode = request.cookies.get('theme_mode', 'light')
     return render_template('index.html', theme_mode=theme_mode)
 
@@ -29,12 +28,12 @@ def login():
         user = cur.fetchone()
 
         if user:
-            stored_password = user[4]  # Assuming password field is at index 5
+            stored_password = user[4]  
             try:
                 ph.verify(stored_password, password)
-                # Password matches, log the user in
+                
                 response = make_response(redirect(url_for('index')))
-                # Set a cookie to remember the preferred theme mode
+                
                 response.set_cookie('theme_mode', request.form.get('theme_mode', 'light'))
                 return response
             except argon2.exceptions.VerifyMismatchError:
@@ -52,7 +51,7 @@ def register():
         username = request.form['Username']
         email = request.form['Email']
         password = request.form['password']
-        hashed_password = ph.hash(password)  # Hash the password using Argon2
+        hashed_password = ph.hash(password)
         cur = mysql.connection.cursor()
 
         cur.execute("INSERT INTO users (name, surname, username, email, password) VALUES (%s, %s, %s, %s, %s)",
@@ -65,9 +64,17 @@ def register():
    
     return render_template('register.html')
 
-@app.route('/static/Templates/Profile.html')
+@app.route('/Templates/Profile.html')
 def profile():
     return render_template('Profile.html')
+
+@app.route('/Templates/index.html')
+def about():
+    return render_template('index.html')
+
+@app.route('/Templates/home.html')
+def home():
+    return render_template('home.html')
 
 if __name__ == '__main__':
     app.debug = True

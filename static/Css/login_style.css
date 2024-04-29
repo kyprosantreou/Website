@@ -54,7 +54,7 @@ h1 {
     cursor: pointer;
     width: 25px;
     height: 25px;
-    background-image: url('../Assets/eye-off.svg'); 
+    background-image: url('../Assets/eye.svg'); 
     background-size: contain;
     background-repeat: no-repeat;
     background-color: #ffffff;
@@ -126,4 +126,9 @@ label[for="rememberMe"] {
     font-weight: 200;
     text-decoration: underline; 
     cursor: pointer;
+}
+
+#validationMessage{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
 }

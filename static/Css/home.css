@@ -1,0 +1,138 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+header {
+    padding: 25px;
+    background-color: rgb(47, 41, 82);
+    font-size: 25px;
+    height: 40px;
+    width: 100%;
+    padding-left: 0; 
+    position: fixed;
+    top: 0;
+    left: 0%;
+    display:flex;
+    justify-content: space-between;
+}
+
+.dark-mode {
+    background-color:#212124;
+    color: white;
+}
+
+#toggle-theme-btn {
+    background-color: rgb(64, 54, 121);
+    border: none;
+    cursor: pointer;
+    padding: 10px; 
+    font-size: 18px;
+    border-radius: 5px;
+    width: auto; 
+    margin-bottom: 10px; 
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start;
+
+}
+
+#button-text {
+    margin-left: 5px;
+    color: white;
+    font-size: 22px;
+    font-family:'Roboto', sans-serif;
+}
+  
+#toggle-theme-btn img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px; 
+}
+
+#button-text:hover {
+    color: rgb(150, 233, 198);
+}
+  
+.board {
+    display: flex;
+    margin-bottom:auto; 
+    margin-top: 80px;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+}
+
+.column-header-todo {
+    background-color: rgb(70, 176, 252);
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+.column-header-inprogress {
+    background-color: rgb(133, 118, 255);
+    color: white;
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+.column-header-done {
+    background-color: rgb(76, 221, 156);
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    border-radius: 5px 5px 0 0;
+    text-align: center;
+}
+
+.tasks {
+    background-color: #dbdbdb;
+    padding: 10px;
+    border-radius: 0 0 5px 5px;
+    min-height: 100px;
+    margin-top: 10px;
+}
+
+.add-task {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+}
+
+.add-task button {
+    background-color: #ffffff;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-size: cover;
+    background-position: center;
+    background-image: url('../Assets/add.png');
+    transition: background-color 0.3s ease;
+}
+
+.add-task button:hover {
+    background-color: rgb(150, 233, 198);
+}
+
+.task {
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.task:hover {
+    background-color: #f9f9f9;
+}

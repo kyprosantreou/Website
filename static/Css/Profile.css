@@ -1,24 +1,91 @@
 body {
-    height: 100%;
-    width: 100%;
-    margin: 0;
+    height: 100vh; 
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: center; 
+    align-items: center; 
+    margin: 0; 
+    background-color: #efeaff;
+    /* background: linear-gradient(90deg, rgb(33, 25, 81) 0%, rgb(131, 111, 255) 50%, rgb(33, 25, 81) 105%); */
+    caret-color: black; 
+    margin-bottom: auto;
 }
 
-.container {
+header {
+    padding: 25px;
+    background-color: rgb(47, 41, 82);
+    font-size: 25px;
+    height: 40px;
+    width: 100%;
+    padding-left: 0; 
+    position: fixed;
+    top: 0;
+    left: 0%;
+    display:flex;
+    justify-content: space-between; 
+  }
+
+.dark-mode {
+    background-color:#212124;
+    color: white;
+}
+
+#toggle-theme-btn {
+    background-color: rgb(64, 54, 121);
+    border: none;
+    cursor: pointer;
+    padding: 10px; 
+    font-size: 18px;
+    border-radius: 5px;
+    width: auto; 
+    margin-bottom: 10px; 
     display: flex;
-    padding: 20px;
+    align-items: center; 
+    justify-content: flex-start;
+}
+  
+#toggle-theme-btn img {
+width: 40px;
+height: 40px;
+margin-right: 10px; 
+}
+
+#button-text:hover {
+    color: rgb(150, 233, 198);
+}
+
+h2{
+    text-decoration: underline;
+}
+
+#button-text {
+margin-left: 5px;
+color: white;
+font-size: 22px;
+font-family:'Roboto', sans-serif;
 }
 
 .profile {
     display: flex;
-    flex-direction: column; /* Adjusted */
+    flex-direction: column;
+    align-items: center; 
 }
 
 .profile-picture {
-    margin-right: 20px; /* Adjusted */
+    margin-bottom:auto; 
+    margin-top: 40px;
+}
+
+.container {
+    display: flex;
+    justify-content: center; 
+}
+
+.account-settings {
+    padding: 20px;
+    max-width: 400px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; 
+    font-weight: 600;
 }
 
 .profile-picture img {
@@ -28,31 +95,32 @@ body {
     object-fit: cover;
 }
 
-.account-settings {
-    flex: 1;
-}
-
-.account-settings h2 {
-    font-size: 24px;
-    margin-bottom: 20px;
-}
-
-.form-group {
-    margin-bottom: 15px;
+.upload-button {
+    cursor: pointer;
+    color: #000000;
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px; 
+    font-weight: 600;
+    border-radius: 10px;
 }
 
 .form-group label {
-    display: block;
-    font-weight: bold;
     margin-bottom: 5px;
+    display: block;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; 
+    font-weight: 600;
+    text-decoration: underline;
 }
 
 .form-group input {
     width: 100%;
     padding: 10px;
     font-size: 16px;
-    border: 1px solid #ccc;
+    border: 4px ;
     border-radius: 5px;
+    margin-bottom: 15px;
 }
 
 .delete-account,
@@ -64,7 +132,7 @@ body {
     font-size: 16px;
     border-radius: 5px;
     cursor: pointer;
-    margin-right: 10px; /* Adjusted */
+    margin-right: 10px;
 }
 
 .delete-account {
@@ -82,4 +150,34 @@ body {
 #upload-profile-pic {
     font-size: large;
     margin-bottom: 20px;
+}
+
+.form-group {
+    position: relative;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+#change-password {
+    width: calc(100% - 40px); 
+    padding-right: 50px;  
+}
+
+.toggle-password {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-80%);
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background-image: url('../Assets/eye.svg'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    border: none;
+    padding: 0;
+    outline: none; 
 }

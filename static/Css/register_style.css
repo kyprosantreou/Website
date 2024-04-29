@@ -54,7 +54,7 @@ h1 {
     cursor: pointer;
     width: 25px;
     height: 25px;
-    background-image: url('../Assets/eye-off.svg'); 
+    background-image: url('../Assets/eye.svg'); 
     background-size: contain;
     background-repeat: no-repeat;
     background-color: #ffffff;
@@ -99,6 +99,11 @@ input[type="submit"]:hover {
 }
 
 #password-error{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+#validationMessage{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
 }
