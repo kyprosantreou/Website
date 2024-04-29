@@ -72,6 +72,10 @@ def profile():
 def about():
     return render_template('index.html')
 
+@app.route('/Templates/home.html')
+def home():
+    return render_template('home.html')
+
 if __name__ == '__main__':
     app.debug = True
     app.run()

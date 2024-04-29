@@ -151,3 +151,33 @@ font-family:'Roboto', sans-serif;
     font-size: large;
     margin-bottom: 20px;
 }
+
+.form-group {
+    position: relative;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+#change-password {
+    width: calc(100% - 40px); 
+    padding-right: 50px;  
+}
+
+.toggle-password {
+    position: absolute;
+    right: 0px;
+    top: 50%;
+    transform: translateY(-80%);
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+    background-image: url('../Assets/eye.svg'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+    border: none;
+    padding: 0;
+    outline: none; 
+}

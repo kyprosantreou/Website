@@ -54,7 +54,7 @@ h1 {
     cursor: pointer;
     width: 25px;
     height: 25px;
-    background-image: url('../Assets/eye-off.svg'); 
+    background-image: url('../Assets/eye.svg'); 
     background-size: contain;
     background-repeat: no-repeat;
     background-color: #ffffff;

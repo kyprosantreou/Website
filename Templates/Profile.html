@@ -41,7 +41,7 @@
     <form>
         <div class="form-group">
             <label for="change-email">New Email:</label>
-            <input type="email" id="change-email" name="change-email">
+            <input type="email" id="change-email" name="change-email" placeholder="example@gmail.com">
         </div>
         <div class="form-group">
             <label for="change-name">Change Name:</label>
@@ -49,11 +49,14 @@
         </div>
         <div class="form-group">
             <label for="change-username">Change Surname:</label>
-            <input type="text" id="change-surname" name="change-surname">
+            <input type="text" id="change-surname" name="change-surname" >
         </div>
         <div class="form-group">
-            <label for="change-surname">Change Password:</label>
-            <input type="password" id="change-password" name="change-password">
+            <label for="change-password">Change Password:</label>
+            <div class="password-wrapper">
+                <input type="password" id="change-password" name="change-password">
+                <button class="toggle-password" type="button" onclick="togglePasswordVisibility()"></button>
+            </div>
         </div>
         <div class="form-group">
             <label for="change-email">Change username:</label>
@@ -79,10 +82,36 @@
 </script>
 <script src="{{ url_for('static', filename='Js/bar.js') }}"></script>
 <script src="{{ url_for('static', filename='Js/darkmode.js') }}"></script>
+<script src="{{ url_for('static', filename='Js/emailValidation.js') }}"></script>
+<script>
+    function redirectToProfilePage() {
+        window.location.href = "../Templates/Profile.html";
+    }
+</script>
+<script>
+    function redirectToAboutPage() {
+        window.location.href = "../Templates/index.html";
+    }
+</script>
 <script>
     function redirectToHomePage() {
-      window.location.href = "../Templates/index.html";
-  }
+        window.location.href = "../Templates/home.html";
+    }
+</script>
+<script>
+    function togglePasswordVisibility() {
+        var passwordInput = document.getElementById("change-password");
+        var passwordToggle = document.querySelector(".toggle-password");
+        
+        if (passwordInput.type === "password") {
+            passwordInput.type = "text";
+            passwordToggle.style.backgroundImage = "url('../static/Assets/eye-off.svg')";
+        } else {
+            passwordInput.type = "password";
+            passwordToggle.style.backgroundImage = "url('../static/Assets/eye.svg')";
+        }
+    }
+
 </script>
 </body>
 </html>

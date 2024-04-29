@@ -24,7 +24,7 @@
     <a href="../Templates/Profile.html" onclick="redirectToProfilePage()">
       <img id="profile" src="" alt=""> Profile
     </a>    
-    <a href="#"><img id="home" src="../static/Assets/home.png" alt="Home"> Home</a>
+    <a href="../Templates/home.html"><img id="home" src="../static/Assets/home.png" alt="Home"> Home</a>
     <a href="../Templates/index.html" onclick="redirectToAboutPage()" ><img id="info" src="../static/Assets/info.png" alt="Info"> About</a>
     <button id="toggle-theme-btn" onclick="toggleDarkMode()" title="Toggle theme mode">
         <img id="modeIcon" src="{{ url_for('static', filename='Assets/sun.svg') }}" alt="Light Mode">
@@ -107,12 +107,17 @@
 <script>
   function redirectToProfilePage() {
     window.location.href = "../Templates/Profile.html";
-}
+  }
 </script>
 <script>
   function redirectToAboutPage() {
     window.location.href = "../Templates/index.html";
-}
+  }
+</script>
+<script>
+  function redirectToHomePage() {
+    window.location.href = "../Templates/home.html";
+  }
 </script>
 </body>
 </html>
