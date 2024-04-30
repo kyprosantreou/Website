@@ -32,11 +32,9 @@
         <h2>To Do</h2>
       </div>
       <div class="tasks" id="todo">
-        <!-- Tasks will be dynamically added here -->
       </div>
       <div class="add-task">
-        <!-- <input type="text" id="taskInput" placeholder="Add new task..."> -->
-        <button onclick="addTask()"></button>
+        <button id="openModalBtn"></button>
       </div>
     </div>
     <div class="column">
@@ -44,7 +42,6 @@
         <h2>In Progress</h2>
       </div>
       <div class="tasks" id="inProgress">
-        <!-- Tasks will be dynamically added here -->
       </div>
     </div>
     <div class="column">
@@ -52,28 +49,54 @@
         <h2>Done</h2>
       </div>
       <div class="tasks" id="done">
-        <!-- Tasks will be dynamically added here -->
       </div>
     </div>
+    <div id="taskModal" class="modal">
+      <div class="modal-content">
+          <span class="close">&times;</span>
+          <h2>Add Task</h2>
+          <form id="taskForm">
+              <label for="taskTitle">Title:</label><br>
+              <input type="text" id="taskTitle" name="taskTitle" required><br>
+              <label for="taskContent">Content:</label><br>
+              <textarea id="taskContent" name="taskContent" required></textarea><br><br>
+              <input type="submit" value="Add Task">
+          </form>
+      </div>
+    </div>
+
+    <div id="editModal" class="modal">
+      <div class="modal-content">
+          <span id="editCloseBtn" class="close">&times;</span>
+          <h2>Edit Task</h2>
+          <form id="editTaskForm">
+              <label for="editTaskTitle">Title:</label><br>
+              <input type="text" id="editTaskTitle" name="editTaskTitle" required><br>
+              <label for="editTaskContent">Content:</label><br>
+              <textarea id="editTaskContent" name="editTaskContent" required></textarea><br><br>
+              <input type="submit" value="Save Changes">
+          </form>
+      </div>
+    </div>
+
   </div>
 
 <script src="{{ url_for('static', filename='Js/bar.js') }}"></script>
-<script src="{{ url_for('static', filename='Js/tasks.js') }}"></script>
 <script src="{{ url_for('static', filename='Js/darkmode.js') }}"></script>
+<script src="{{ url_for('static', filename='Js/modal.js') }}"></script>
 <script>
     function redirectToProfilePage() {
         window.location.href = "../Templates/Profile.html";
     }
-</script>
-<script>
+
     function redirectToAboutPage() {
         window.location.href = "../Templates/index.html";
     }
-</script>
-<script>
+
     function redirectToHomePage() {
         window.location.href = "../Templates/home.html";
     }
 </script>
+
 </body>
 </html>

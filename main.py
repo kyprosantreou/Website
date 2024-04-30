@@ -32,7 +32,7 @@ def login():
             try:
                 ph.verify(stored_password, password)
                 
-                response = make_response(redirect(url_for('index')))
+                response = make_response(redirect(url_for('home')))
                 
                 response.set_cookie('theme_mode', request.form.get('theme_mode', 'light'))
                 return response
