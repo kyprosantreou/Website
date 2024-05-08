@@ -1,11 +1,13 @@
 var modal = document.getElementById("taskModal");
-
 var btn = document.getElementById("openModalBtn");
-
 var span = document.getElementsByClassName("close")[0];
+var titleInput = document.getElementById("taskTitle");
+var contentInput = document.getElementById("taskContent");
 
 btn.onclick = function() {
     modal.style.display = "block";
+    titleInput.value = "";
+    contentInput.value = "";
 }
 
 span.onclick = function() {
@@ -20,8 +22,8 @@ window.onclick = function(event) {
 
 document.getElementById("taskForm").addEventListener("submit", function(event) {
     event.preventDefault(); 
-    var title = document.getElementById("taskTitle").value;
-    var content = document.getElementById("taskContent").value;
+    var title = titleInput.value;
+    var content = contentInput.value;
     console.log("Title:", title, "Content:", content); 
 
     var task = document.createElement("div");
@@ -79,3 +81,4 @@ document.getElementById("editTaskForm").addEventListener("submit", function(even
 document.getElementById("editCloseBtn").addEventListener("click", function() {
     document.getElementById("editModal").style.display = "none";
 });
+

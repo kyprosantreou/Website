@@ -20,7 +20,7 @@ def index():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        email = request.form['Email']
+        email = request.form['Email'].lower()
         password = request.form['password']
         cur = mysql.connection.cursor()
 
@@ -49,7 +49,7 @@ def register():
         name = request.form['Name']
         surname = request.form['Surname']
         username = request.form['Username']
-        email = request.form['Email']
+        email = request.form['Email'].lower()
         password = request.form['password']
         hashed_password = ph.hash(password)
         cur = mysql.connection.cursor()

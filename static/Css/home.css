@@ -149,11 +149,11 @@ header {
 }
 
 .modal-content {
-    background-color: rgb(103, 198, 227);
+    background-color: rgb(222, 255, 251);
     margin: auto; 
     margin-top: 10%; 
     padding: 20px;
-    border: 1px solid #888;
+    border: 1px solid #000000;
     width: 80%;
     max-width: 500px;
     border-radius: 20px;
@@ -172,7 +172,7 @@ header {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400; 
-    background-color:rgb(223, 245, 255);
+    background-color:rgb(238, 247, 255);
 }
 
 .modal-content input[type="text"]{
@@ -182,7 +182,7 @@ header {
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
     font-weight: 400;
-    background-color:rgb(223, 245, 255);
+    background-color:rgb(238, 247, 255);
 }
 
 .modal-content input[type="submit"] {
@@ -216,3 +216,39 @@ header {
     text-decoration: none;
     cursor: pointer;
 }
+
+.edit-btn {
+    background-color: rgb(76, 221, 156); 
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 5px; 
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.edit-btn:hover {
+    background-color:rgb(25, 243, 152); 
+}
+.delete-btn {
+    background-color: #fa4e42;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.delete-btn:hover {
+    background-color: #ff1100;
+}
+
+
