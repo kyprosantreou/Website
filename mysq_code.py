@@ -20,6 +20,18 @@ try:
         );
         ''')
 
+        cursor.execute('''
+        CREATE TABLE Tasks (
+            TaskID INT AUTO_INCREMENT PRIMARY KEY,
+            Title VARCHAR(255) NOT NULL,
+            Content TEXT,
+            Status ENUM('todo', 'inprogress', 'done') DEFAULT 'todo',
+            CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP           
+        );
+        ''')
+
+
         mydb.commit()
 
 except mysql.connector.Error as err:

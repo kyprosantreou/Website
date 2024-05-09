@@ -1,5 +1,5 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
@@ -97,7 +97,7 @@ header {
     border-radius: 0 0 5px 5px;
     min-height: 100px;
     margin-top: 10px;
-}
+} 
 
 .add-task {
     position: fixed;
@@ -138,7 +138,7 @@ header {
 
 .modal {
     display: none;
-    position: fixed;
+    position:fixed;
     z-index: 1;
     left: 0;
     top: 0;
@@ -251,4 +251,60 @@ header {
     background-color: #ff1100;
 }
 
+.move-to-in-progress-btn{
+    background-color: rgb(131, 192, 193);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 5px; 
+    cursor: pointer;
+    border-radius: 20px;
+}
+.move-to-in-progress-btn:hover{
+    background-color: rgb(114, 233, 235);
+}
 
+.move-to-done-btn{
+    background-color: rgb(97, 159, 196);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-right: 5px; 
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.move-to-done-btn:hover{
+    background-color: rgb(59, 178, 247);
+}
+
+.edit-btn,
+.delete-btn {
+    display: inline-block; 
+    vertical-align: top; 
+    margin-right: 5px; 
+    margin-bottom: 5px; 
+}
+
+.move-to-done-btn,
+.move-to-in-progress-btn {
+    display: inline-block;
+    vertical-align: top; 
+    margin-bottom: 5px; 
+}
+
+.task-date {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px; 
+    color: #000000; 
+    margin-top: 5px;
+    display: block; 
+}

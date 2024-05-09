@@ -64,6 +64,21 @@ def register():
    
     return render_template('register.html')
 
+@app.route('/Templates/home.html',methods=['POST'])
+def create_task():
+    if request.method == "POST":
+        title = request.form["taskTitle"]
+        content = request.form["taskContent"]
+        cur = mysql.connection.cursor()
+
+        cur.execute("INSERT INTO tasks (title, content) VALUES (%s, %s)",
+                    (title, content))
+        
+        mysql.connection.commit()
+        cur.close()
+
+    return render_template('home.html')
+
 @app.route('/Templates/Profile.html')
 def profile():
     return render_template('Profile.html')
