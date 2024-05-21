@@ -28,14 +28,6 @@
     </button>
 </div>
 
-<div class="profile">
-<div class="profile-picture">
-    <img id="profile-image" src="{{ url_for('static', filename='Assets/person.png') }}" alt="Profile Picture">
-    <input type="file" id="upload-profile-pic" accept="image/*" style="display: none;">
-</div>
-
-<label  for="upload-profile-pic" class="upload-button">Upload Profile Picture.</label>
-
 <div class="account-settings">
     <h2>Account Settings:</h2>
     <form>
@@ -62,7 +54,7 @@
             <label for="change-email">Change username:</label>
             <input type="text" id="change-username" name="change-username">
         </div>
-        <button type="submit" class="delete-account">Delete Account:</button>
+        <button type="submit" class="delete-account">Delete Account</button>
         <button type="submit" class="submit">Submit</button>
     </form>
 </div>

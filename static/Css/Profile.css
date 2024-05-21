@@ -64,17 +64,6 @@ font-size: 22px;
 font-family:'Roboto', sans-serif;
 }
 
-.profile {
-    display: flex;
-    flex-direction: column;
-    align-items: center; 
-}
-
-.profile-picture {
-    margin-bottom:auto; 
-    margin-top: 40px;
-}
-
 .container {
     display: flex;
     justify-content: center; 
@@ -86,13 +75,6 @@ font-family:'Roboto', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-size: 16px; 
     font-weight: 600;
-}
-
-.profile-picture img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    object-fit: cover;
 }
 
 .upload-button {
@@ -145,11 +127,6 @@ font-family:'Roboto', sans-serif;
 
 .submit:hover {
     background-color: #00ff15;
-}
-
-#upload-profile-pic {
-    font-size: large;
-    margin-bottom: 20px;
 }
 
 .form-group {
