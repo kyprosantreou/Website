@@ -26,7 +26,8 @@ try:
             Title VARCHAR(255) NOT NULL,
             Content TEXT,
             Status ENUM('todo', 'inprogress', 'done') DEFAULT 'todo',
-            CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP         
+            CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+            username VARCHAR(255)       
         );
         ''')
 
